@@ -1,0 +1,454 @@
+.app{
+  max-width: 1620px;
+  margin: 0 auto;
+}
+ul{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+a{
+  text-decoration: none;
+    font-size: 16px;
+  color: #035755;
+      line-height: 1;
+
+  &:hover{
+    color: #FB4C47;
+  }
+}
+
+.navigation{
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  font-family: 'Gelion Regular', sans-serif;
+  margin: 0px 10rem;
+  .logo{
+    font-size: 15px;
+    font-weight: 700;
+    color: #035755;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links{
+    @media screen and (max-width:800px){
+        li:not(:last-child){
+        display: none;
+      }
+    }
+  }
+  
+  .nav-contact{
+    border: 1px solid #FB4C47;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    color: #FB4C47;
+    font-weight: 600;  
+    &:hover{
+      background: #FB4C47;
+      color: #fff;  
+    } 
+  }
+  @media screen and (max-width:1024px){
+    margin: 0px 4rem;
+  } 
+  @media screen and (max-width:600px){
+    margin: 0px 1.5rem;
+  } 
+}
+.header{
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  img{
+    width: 55%;
+    @media screen and (max-width:1024px){
+      width: 40%;
+    }
+    @media screen and (max-width:600px){
+      width: 100%;
+      &.header-text{
+        padding: 1.5rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width:600px){
+    flex-direction: column-reverse;
+      .header-text{
+        padding: 1.5rem;
+      }
+    }
+}
+.header-text{
+  font-family: "Red Hat Display", sans-serif;
+  max-width: 500px;
+  margin-left: 10rem;
+  @media screen and (max-width:1024px){
+    margin-left: 4rem;
+  } 
+  @media screen and (max-width:600px){
+    margin-left: 0;
+  } 
+  h1{
+    color: #035755;
+    line-height: 2.5rem;
+    font-weight: 800;
+    font-size: 2.5vw;
+    @media screen and (max-width:600px){
+      font-size: 1.5rem;
+    }
+  }
+  span{
+    color: #FB4C47;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+  }
+  p{
+    color: #035755;
+    font-size: .9rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    text-align: justify;
+
+  }
+}
+
+.btn-primary{
+  background: #FB4C47;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn-secondary{
+  background: #FEE6E5;
+  color: #FA5652;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: .9rem;
+  &:hover{
+    background: #FA5652;
+    color: #fff;
+  }
+}
+
+.coronavirus{
+  background-image: url('/src/assets/aboutus.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 10rem;
+  @media screen and (max-width:1024px){
+    padding: 5rem;
+    
+  }
+  @media screen and (max-width:600px){
+    padding: 0;
+    
+  }
+}
+
+.coronavirus-text{
+    margin-left: auto;
+    @media screen and (max-width:1190px){
+      margin-left: 15rem;
+      
+    }
+    @media screen and (max-width:600px){
+      margin-left: 0;
+      &.header-text{
+        padding: 1.5rem;
+      }
+      
+    }
+}
+
+.contagion{
+  border-radius: 10px;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 1100px;
+  position: relative;
+  padding: 1.5rem;
+  &-bg-img{
+    position: absolute;
+    bottom: 0;
+    left: -150px;
+    z-index: -1;
+  }
+  .header-text {
+    p{
+      text-align: center;
+    }
+    margin: 0 auto;
+  }
+  &-text{
+    box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    border-radius: 10px;
+    background: #fff;
+    margin: 2rem 0;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    &:hover{
+      border-bottom: 3px solid #FB4C47;
+      box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    img{
+    margin: 0 auto;
+    }
+    h3{
+      color: #035755;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+    }
+    p{
+      color: #035755;
+      font-size: .9rem;
+      line-height: 1.5rem;
+      max-width: 400px;
+      margin: 1rem auto 0;
+      text-align: center;
+    }
+  }
+  &-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+.symptom{
+  text-align: center;
+  margin: 5rem auto 0;
+  padding: 0 1.5rem;
+  &.header-text{
+     max-width: 700px;
+  }
+  p{
+     text-align: center;
+   
+  }
+}
+
+
+.what-should-we-do{
+  margin-top: 5rem;
+  position: relative;
+  .green-virus{
+    position: absolute;
+    top: 350px;
+    z-index: -1;
+  }
+  .red-virus{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &-steps{
+    padding: 1.5rem;
+  }
+  &-subtext{
+    text-align: center;
+    margin: 0 auto 5rem;
+    padding: 0 1.5rem;
+    p{
+      text-align: center;
+      max-width: 700px;
+    }
+
+  }
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:nth-child(2), &:nth-child(4){
+      flex-direction: row-reverse;
+    }
+    gap: 10rem;
+    @media screen and (max-width:900px){
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      &:nth-child(2), &:nth-child(4){
+        flex-direction: column;
+      }
+    }
+    
+    span{
+      width: 75px;
+      height: 75px;
+      background-color: #FFE4E4;
+      font-size: 2.5rem;
+      font-weight: 600;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FA5652;
+      @media screen and (max-width:600px){
+        width: 120px;
+      }
+    }
+    h3{
+      color: #035755;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+    }
+    p{
+      color: #035755;
+      font-size: .9rem;
+      line-height: 1.5rem;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      text-align: justify;
+    }
+    > div{
+      display: flex;
+      gap: 3rem;
+
+      p{
+        max-width: 400px;
+      }
+      @media screen and (max-width:600px){
+        gap: 1rem;
+        
+      }
+      
+    }
+    
+  }
+}
+
+
+footer{
+  text-align: center;
+  position: relative;
+  padding-top: 10rem;
+  h1{
+   color: #0C6C44
+  }
+  .bg-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    img{
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+  .footer-input{
+    position: relative;
+    max-width: 30.375rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.5rem;
+    input{
+      background: #FFFFFF;
+      box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+      border-radius: 57px;
+      border: none;
+      max-width: 30.375rem;
+      height: 5.125rem;
+      width: 100%;
+      margin-top: 3rem;
+      padding: 1rem 10rem 1rem 2rem;
+    }
+    button{
+      background: #FB4C47;
+      color: #fff;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 2rem;
+      font-size: .9rem;
+      position: absolute;
+      top: 1.8rem;
+      right: 2.5rem;
+    }
+  }
+  
+  .rights-text{
+    color: #035755;
+    font-size: .8rem;
+    margin: 1rem;
+  }
+  .footer-navigation{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    font-family: 'Gelion Regular', sans-serif;
+    margin: 5rem 10rem 0;
+    .logo{
+      font-size: 15px;
+      font-weight: 700;
+      color: #035755;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    @media screen and (max-width:1200px){
+      margin: 5rem 4rem 0;
+    }
+    @media screen and (max-width:900px){
+      ul{
+        display: none;
+      }
+    }
+    @media screen and (max-width:600px){
+      margin: 5rem 1.5rem 0;
+    }
+  }
+}
+
